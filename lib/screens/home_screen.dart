@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_travel_ui_starter/widgets/hoter_carousel.dart';
+import 'package:garden_city_app/widgets/garden.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import '../widgets/destination_carousel.dart';
+import '../widgets/city.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -12,10 +12,10 @@ class _HomeScreenState extends State<HomeScreen> {
   int _selectedIndex = 0;
   int _currentTab = 0;
   List<IconData> _icons = [
-    FontAwesomeIcons.plane,
-    FontAwesomeIcons.bed,
-    FontAwesomeIcons.walking,
-    FontAwesomeIcons.biking,
+    FontAwesomeIcons.leaf,
+    FontAwesomeIcons.spa,
+    FontAwesomeIcons.tree,
+    FontAwesomeIcons.globe,
   ];
 
   Widget _buildIcon(int index){
@@ -55,7 +55,7 @@ class _HomeScreenState extends State<HomeScreen> {
           children: <Widget>[
           Padding(
             padding: const EdgeInsets.only(left: 20.0, right: 120.0),
-            child: Text('What would you like to find', style: TextStyle(
+            child: Text('Let`s See the Garden !', style: TextStyle(
               fontSize : 30.0,
               fontWeight : FontWeight.bold
             )),
@@ -70,9 +70,9 @@ class _HomeScreenState extends State<HomeScreen> {
             
           ),
           SizedBox(height: 20.0,),
-          DestinationCarousel(),
+          City(),
           SizedBox(height: 20.0,),
-          HotelCaousel(),
+          Garden(),
         ])
       ),
       bottomNavigationBar: BottomNavigationBar(
@@ -88,14 +88,16 @@ class _HomeScreenState extends State<HomeScreen> {
           icon:Container(
             margin : EdgeInsets.symmetric(vertical : 2),
             child: Icon(Icons.search,
-             size : 30.0
+             size : 30.0,
+             color : Color.fromARGB(255, 12, 69, 14),
              ),
           ),
            label : ''
            ),
            BottomNavigationBarItem(
-            icon:Icon(Icons.local_pizza,
-            size : 30.0
+            icon:Icon(Icons.people,
+            size : 30.0,
+            color : Color.fromARGB(255, 12, 69, 14),
             ),
             label : ''
             ),

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_travel_ui_starter/screens/home_screen.dart';
+import 'package:garden_city_app/screens/home_screen.dart';
 
 void main() => runApp(MyApp());
 
@@ -8,11 +8,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Travel UI',
+      title: 'Garden City App',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primaryColor: Color(0xFF3EBACE),
-        accentColor: Color(0xFFD8ECF1),
+        primaryColor: Color.fromARGB(255, 28, 80, 38),
+        accentColor: Color.fromARGB(255, 160, 242, 151),
         scaffoldBackgroundColor: Color(0xFFF3F5F7),
       ),
       home: HomeScreen(),
